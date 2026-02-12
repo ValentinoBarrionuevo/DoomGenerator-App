@@ -1,18 +1,18 @@
-# 🧠 DoomScroll Learning Engine
+# DoomScroll Learning Engine
 
 > Hackeando el sistema de recompensa: Una aplicación que transforma el vicio del scroll infinito en una herramienta de aprendizaje activo, construida con principios de Ingeniería de Software.
 
-## 📋 Descripción
+## Descripción
 Este proyecto es una prueba de concepto (PoC) que busca mitigar el efecto del "Doomscrolling" (consumo pasivo y compulsivo de contenido) reemplazándolo por micro-dosis de material de estudio universitario. 
 
 A diferencia de una app de flashcards tradicional, utiliza la **psicología del Feed Infinito** para mantener al usuario enganchado mientras repasa conceptos complejos de Programación Orientada a Objetos (POO).
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 * **Lenguaje:** TypeScript (Strict mode).
 * **Entorno:** Node.js.
 * **Paradigma:** Programación Orientada a Objetos (POO).
 
-## 🏛️ Arquitectura y Competencias Aplicadas
+## Arquitectura y Competencias Aplicadas
 
 Este proyecto no utiliza frameworks por defecto; se construyó el motor lógico desde cero para demostrar el dominio de estructuras de datos y patrones de diseño.
 
@@ -28,9 +28,9 @@ Implementación de patrones clásicos para resolver problemas de extensibilidad:
 
 ### 3. Principios S.O.L.I.D.
 * **Open/Closed Principle (OCP):** El sistema está abierto a nuevos tipos de contenido (extendiendo la clase base) pero cerrado a modificaciones en el motor de scroll.
-* [cite_start]**Liskov Substitution Principle (LSP):** El `FeedManager` opera sobre la abstracción `ContenidoEducativo`, permitiendo que cualquier subclase (`TarjetaCodigo`, `TarjetaTeoria`) sea procesada sin romper la lógica del sistema.
+* **Liskov Substitution Principle (LSP):** El `FeedManager` opera sobre la abstracción `ContenidoEducativo`, permitiendo que cualquier subclase (`TarjetaCodigo`, `TarjetaTeoria`) sea procesada sin romper la lógica del sistema.
 
-## 🚀 Cómo correr el proyecto
+## Cómo correr el proyecto
 1.  Clonar el repositorio.
 2.  Instalar dependencias: `npm install`
 3.  Ejecutar: `npm start` (o `ts-node main.ts`)
