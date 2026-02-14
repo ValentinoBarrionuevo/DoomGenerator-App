@@ -3,8 +3,7 @@
 ## Descripción
 Este proyecto es una prueba de concepto (PoC) que busca mitigar el efecto del "Doomscrolling" (consumo pasivo y compulsivo de contenido) reemplazándolo por micro-dosis de material de estudio universitario. 
 
-A diferencia de una app de flashcards tradicional, utiliza la **psicología del Feed Infinito** para mantener al usuario enganchado mientras repasa conceptos complejos de Programación Orientada a Objetos (POO).
-
+A diferencia de una app de flashcards tradicional, utiliza la **psicología del Feed Infinito** para mantener al usuario enganchado mientras repasa conceptos complejos de lo que uno quiera.
 ## Stack Tecnológico
 * **Lenguaje:** TypeScript (Strict mode).
 * **Entorno:** Node.js.
