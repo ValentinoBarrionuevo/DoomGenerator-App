@@ -1,7 +1,5 @@
 # DoomScroll Learning Engine
 
-> Hackeando el sistema de recompensa: Una aplicación que transforma el vicio del scroll infinito en una herramienta de aprendizaje activo, construida con principios de Ingeniería de Software.
-
 ## Descripción
 Este proyecto es una prueba de concepto (PoC) que busca mitigar el efecto del "Doomscrolling" (consumo pasivo y compulsivo de contenido) reemplazándolo por micro-dosis de material de estudio universitario. 
 
