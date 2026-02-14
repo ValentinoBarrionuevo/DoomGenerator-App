@@ -1,26 +1,52 @@
 import { ContenidoEducativo } from "./ContenidoEducativo";
+import { MyNode } from "./MyNode";
 
-export class FeedManager {
-    private colaDeContenido: MyNode<T>;
+export class FeedManager<T extends ContenidoEducativo> {
+    private first: MyNode<T> | undefined;
+    private last: MyNode<T> | undefined;
 
     constructor() {
-        this.colaDeContenido = undefined as unknown as MyNode<T>
+        this.first = undefined;
+        this.last = undefined;
     }
 
-    // ---> intentando usar seccion de colas para crear un scroll infinito...
- 
-    agregarAlFeed(contenido: ContenidoEducativo) {
-        this.colaDeContenido.push(contenido);
-    }
+    public enqueue(value: T): void {
+        const newNode = new MyNode(value);
 
-    scrollear(): void {
-        if (this.colaDeContenido.length === 0) {
-            console.log("No hay mas contenido")
-            return;
+        if (!this.first) {
+            this.first = newNode;
+            this.last = newNode;
         }
-    
-        const tarjeta = this.colaDeContenido.shift();
+        else {
+            this.last!.next = newNode;
+            this.last = newNode;
+        }
+    }
 
-        tarjeta?.renderizar();
+    public dequeue(): T | undefined {
+        if (this.isEmpty()){
+            return undefined;
+        }
+        const value = this.first?.value;
+        this.first = this.first?.next;
+        if (!this.first) {
+            this.last = undefined;
+        }
+        return value;
+    }
+    public isEmpty(): boolean {
+        return this.first === undefined;
+    }
+    public agregarAlFeed(contenido: T): void {
+        this.enqueue(contenido);
+    }
+    public scrollear(): void {
+        const tarjeta = this.dequeue();
+        
+        if (tarjeta) {
+            tarjeta.renderizar();
+        } else { 
+            console.log("Fin")
+        }
     }
 }

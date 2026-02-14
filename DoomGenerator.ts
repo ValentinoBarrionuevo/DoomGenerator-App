@@ -1,17 +1,19 @@
 import { TarjetaTeoria } from "./TarjetaTeoria"
+import { TarjetaCodigo } from "./TarjetaCodigo";
+import { ContenidoEducativo } from "./ContenidoEducativo";
 
 export type TipoContenido = 'TEORIA' | 'CODIGO';
 
 export class DoomGenerator {
 
-    crearContenido(tema: string, dificultad: number, texto: string, contenido: string, extra?: string): ContenidoEducativo {
-        switch (tipo) {
+    crearContenido(tema: string, dificultad: number, texto: string, contenido: string, codigo: string): ContenidoEducativo {
+        switch (tema) {
             case 'TEORIA':
-                return new TarjetaTeoria(tema, dificultad, contenido);
+                return new TarjetaTeoria(tema, dificultad, contenido, texto);
             case 'CODIGO':
-                return new TarjetaTeoria(tema, dificultad, contenido, extra || 'txt');
+                return new TarjetaTeoria(tema, dificultad, contenido, codigo || 'txt');
             default:
-                throw new Error("Tipo de contenido no soportado (Kernel Panic!)");
+                throw new Error("Tipo de contenido no soportado");
         }
     }
 }

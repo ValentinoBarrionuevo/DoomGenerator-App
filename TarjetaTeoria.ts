@@ -1,4 +1,5 @@
 import { ContenidoEducativo } from "./ContenidoEducativo"
+import { TarjetaCodigo } from "./TarjetaCodigo"
 
 export class TarjetaTeoria extends ContenidoEducativo {
     private texto: string
@@ -11,7 +12,7 @@ export class TarjetaTeoria extends ContenidoEducativo {
     }
     renderizar(): void {
         console.log(`--- SNNIPET de ${this.lenguaje.toUpperCase()} (${this.tema}---`);
-        console.log(this.codigo);
+        console.log(this.texto);
         console.log("--------------------------------------------------------------");
         }
 }
