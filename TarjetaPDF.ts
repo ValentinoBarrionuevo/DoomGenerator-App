@@ -3,39 +3,18 @@ import { ContenidoEducativo } from "./ContenidoEducativo.js";
 export class TarjetaPDF extends ContenidoEducativo {
     url: string;
 
-    constructor(tema: string, dificiultad: number, url: string) {
-        super(tema, dificiultad)
-        this.url = url
+    constructor(tema: string, dificultad: number, url: string) {
+        super(tema, dificultad);
+        this.url = url;
     }
 
     override renderizar(): string {
-        const contenedor = document.getElementById('feed-container');
-
-        const card = document.createElement('div')
-        card.className = 'doom-card pdf-card';
-        card.style.border = "1px solid #00ff00";
-        card.style.margin = "20px 0";
-        card.style.padding = "10px";
-
-
-        const header = document.createElement('h3');
-        header.innerText = `[PDF: ${this.tema}] - Dificultad: ${this.dificultad}`;
-        card.appendChild(header);
-
-
-        const iframe = document.createElement('iframe');
-        iframe.src = this.url;
-        iframe.width = "100%";
-        iframe.height = "500px";
-        iframe.style.border = "none";
-
-        card.appendChild(iframe);
-
-
-        if(contenedor) {
-            contenedor.appendChild(card);
-            return card.outerHTML;
-        }
-        return "";
+        return `
+            <div class="pdf-header">
+                <h3 style="color: #ff0055;">[PDF_NODE] :: ${this.tema}</h3>
+                <small>DOC_ID: ${Math.floor(Math.random() * 9999)}</small>
+            </div>
+            <iframe src="${this.url}" width="100%" height="500px" style="border:none; margin-top:10px;"></iframe>
+        `;
     }
 }
