@@ -7,7 +7,7 @@ A diferencia de una app de flashcards tradicional, utiliza la **psicología del 
 
 ---
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 * **Lenguaje:** TypeScript (Strict mode).
 * **Interfaz:** HTML5 & CSS3.
 * **Entorno:** Browser-native (ES Modules). Se abandonó el entorno Node.js para priorizar la ejecución directa en el navegador.
@@ -15,7 +15,7 @@ A diferencia de una app de flashcards tradicional, utiliza la **psicología del 
 
 ---
 
-## 🧠 Arquitectura y Competencias Aplicadas
+## Arquitectura y Competencias Aplicadas
 
 El motor lógico se construyó desde cero, sin frameworks, para demostrar el dominio de las entrañas del desarrollo web y la ingeniería de software.
 
@@ -39,7 +39,7 @@ La transición al navegador implicó el manejo avanzado del **DOM (Document Obje
 
 ---
 
-## 🚀 Cómo correr el proyecto
+## Cómo correr el proyecto
 
 Debido al uso de **ES Modules** y políticas de seguridad del navegador (CORS), no es posible ejecutar el proyecto abriendo el archivo directamente desde el disco.
 
