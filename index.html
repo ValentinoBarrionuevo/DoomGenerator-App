@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOMSCROLL_ENGINE_V1</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #4dff00;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #app-container {
+            border: 2px solid #00ff41;
+            width: 90%;
+            max-width: 400px;
+            height: 80vh;
+            margin-top: 20px;
+            padding: 20px;
+            box-shadow: 0 0 15px #00ff41;
+            position: relative;
+            background: rgba(0, 20, 0, 0.9);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 1px dashed #00ff41;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        #tarjeta-actual {
+            border: 1px solid #333;
+            padding: 15px;
+            min-height: 200px;
+            background-color: #000;
+            white-space: pre-wrap;
+        }
+
+        .btn-scroll {
+            background-color: #003300;
+            color: #00ff41;
+            border: 1px solid #00ff41;
+            padding: 15px;
+            width: 100%;
+            margin-top: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .btn-scroll:hover {
+            background-color: #00ff41;
+            color: #000;
+        }
+
+        .scan-line {
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 255, 65, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: scan 3s linear infinite;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        @keyframes scan {
+            0% { top: 0%; }
+            100% { top: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app-container">
+        <div class="scan-line"></div>
+        <div class="header">
+            <h2>SYSTEM_READY</h2>
+            <small>Protocol: DOOMSCROLL</small>
+        </div>
+
+        <div id="tarjeta-actual">
+            [ESPERANDO INPUT DEL USUARIO...]
+        </div>
+
+        <button id="btn-next" class="btn-scroll">SCROLL_DOWN (▼)</button>
+    </div>
+
+    <script type="module" src="../../dist/ProyectoDoom/main.js"></script>
+
+</body>
+</html>
